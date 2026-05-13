@@ -63,7 +63,7 @@ export default function MainContent() {
         }
       `}</style>
       <div
-        className="min-h-[300px] sm:min-h-[400px] md:min-h-[500px] py-6 sm:py-8 md:py-16 flex items-center relative overflow-hidden animated-gradient"
+        className="min-h-[200px] sm:min-h-[280px] md:min-h-[360px] pt-0 pb-4 sm:pb-6 md:pb-12 flex items-center relative overflow-hidden animated-gradient"
         style={{
           background: `radial-gradient(circle at top right, ${colors?.[0]?.hex || '#94a3b8'}30 0%, ${colors?.[0]?.hex || '#94a3b8'}10 50%, transparent 80%)`,
         }}
