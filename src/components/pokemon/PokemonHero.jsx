@@ -19,16 +19,8 @@ export default function PokemonHero() {
     : primaryHex;
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-8 md:gap-64">
-      <div className="flex-1 max-w-xl">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4" style={{ color: nameColor }}>
-          {name}
-        </h1>
-        <p className="text-base md:text-lg" style={{ color: 'var(--muted-foreground)' }}>
-          {t('hero.desc')}
-        </p>
-      </div>
-      <div className="flex-shrink-0 relative" style={{ width: 220, height: 220 }}>
+    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 lg:gap-20">
+      <div className="flex-shrink-0 relative w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56">
         {loading ? (
           <LoadingSpinner size={32} />
         ) : sprite ? (
@@ -41,6 +33,14 @@ export default function PokemonHero() {
             }}
           />
         ) : null}
+      </div>
+      <div className="min-w-0 max-w-lg">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 break-words" style={{ color: nameColor }}>
+          {name}
+        </h1>
+        <p className="text-base md:text-lg" style={{ color: 'var(--muted-foreground)' }}>
+          {t('hero.desc')}
+        </p>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ export default function ControlSidebar({ open, onToggle, onClose }) {
   };
 
   const sidebarContent = (
-    <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4">
+    <div className="flex-1 overflow-y-auto px-4 md:px-6 pt-6 md:pt-12 pb-4 md:pb-6 space-y-4">
       {/* Close button - mobile */}
       <div className="flex md:hidden items-center justify-between">
         <span className="text-sm font-semibold" style={{ color: 'var(--foreground)' }}>{t('sidebar.pokemon')}</span>

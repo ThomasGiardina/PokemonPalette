@@ -63,7 +63,7 @@ export default function MainContent() {
         }
       `}</style>
       <div
-        className="min-h-[300px] sm:min-h-[400px] md:min-h-[500px] py-6 sm:py-8 md:py-16 px-4 md:px-10 flex items-center relative overflow-hidden animated-gradient"
+        className="min-h-[300px] sm:min-h-[400px] md:min-h-[500px] py-6 sm:py-8 md:py-16 flex items-center relative overflow-hidden animated-gradient"
         style={{
           background: `radial-gradient(circle at top right, ${colors?.[0]?.hex || '#94a3b8'}30 0%, ${colors?.[0]?.hex || '#94a3b8'}10 50%, transparent 80%)`,
         }}
@@ -71,7 +71,7 @@ export default function MainContent() {
         <div className="absolute inset-x-0 bottom-0 h-32 pointer-events-none" style={{
           background: `linear-gradient(to bottom, transparent, var(--background))`,
         }} />
-        <div className="relative z-10 w-full">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <PokemonHero />
         </div>
       </div>
