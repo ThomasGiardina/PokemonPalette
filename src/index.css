@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #395a83;
+  --primary-foreground: #ffffff;
+  --secondary: #5283c5;
+  --secondary-foreground: #ffffff;
+  --accent: #183973;
+  --accent-foreground: #ffffff;
+  --background: #0a0a0a;
+  --foreground: #f4f5f6;
+  --card: #1a1a1a;
+  --card-foreground: #f4f5f6;
+  --muted: #252d37;
+  --muted-foreground: #98a4b3;
+  --border: #2d3743;
+  --ring: var(--primary);
+  --sidebar: #0d0d0d;
+  --sidebar-foreground: #f4f5f6;
+  --sidebar-muted: #1a1a1a;
+  --sidebar-border: #222;
+}
+
+.light {
+  --primary: #395a83;
+  --primary-foreground: #ffffff;
+  --secondary: #5283c5;
+  --secondary-foreground: #ffffff;
+  --accent: #183973;
+  --accent-foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #151e28;
+  --card: #f8f9fb;
+  --card-foreground: #151e28;
+  --muted: #f2f4f7;
+  --muted-foreground: #627084;
+  --border: #e0e5eb;
+  --ring: var(--primary);
+  --sidebar: #f4f5f7;
+  --sidebar-foreground: #151e28;
+  --sidebar-muted: #e8eaee;
+  --sidebar-border: #dce0e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
+
+@keyframes gradient-shift {
+  0%, 100% { background-size: 120% 120%; }
+  50% { background-size: 200% 200%; }
+}
+.animated-gradient {
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+.image-pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
