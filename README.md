@@ -68,7 +68,7 @@ src/
 ## Cosas a mejorar (si alguien quiere forkear)
 
 - El extractor de colores es medio pelo, se podría mejorar con k-means de verdad
-- No cubre todos los Pokémon (solo hasta Gen 8, id 898, para random)
+- El random va hasta 1025 (Gen 9) pero la PokéAPI completa tiene más de 1100 (las generaciones nuevas con parches)
 - La vista preview mobile zafa pero se podría ajustar mejor
 - Faltan más idiomas
 

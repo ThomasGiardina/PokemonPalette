@@ -49,7 +49,7 @@ export function PokemonProvider({ children }) {
   }, []);
 
   const getRandomPokemon = useCallback(() => {
-    const randomId = Math.floor(Math.random() * 898) + 1;
+    const randomId = Math.floor(Math.random() * 1025) + 1;
     navigatePokemon(randomId);
   }, [navigatePokemon]);
 
@@ -59,7 +59,7 @@ export function PokemonProvider({ children }) {
     if (randomize) {
       getRandomPokemon();
       randomIntervalRef.current = setInterval(() => {
-        const randomId = Math.floor(Math.random() * 898) + 1;
+        const randomId = Math.floor(Math.random() * 1025) + 1;
         navigatePokemon(randomId);
       }, 4000);
     }
